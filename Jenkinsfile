@@ -5,6 +5,7 @@ pipeline {
   stages {
     stage('init'){
       steps {
+        checkout scm
         sh 'echo "HOLAAAAAAAAAAAAAAAA"'
       }
         }
@@ -18,7 +19,7 @@ pipeline {
     }
     stage('init2'){
       steps {
-        sh 'ls'
+        sh ''
       }
         }
     stage('Docker') {
