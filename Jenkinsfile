@@ -16,7 +16,11 @@ pipeline {
         }
       }
     }
-  
+    stage('init2'){
+      steps {
+        sh 'ls'
+      }
+        }
     stage('Docker') {
       stages {
         stage('Build') {
