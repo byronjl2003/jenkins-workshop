@@ -15,5 +15,10 @@ services:
       JENKINS_URL: "http://localhost:8080"
       ADMIN_ADDRESS: "jenkins@trambo.cloud"
     volumes:
+      - "certs:/certs/client"
+      - "data:/var/jenkins_home"
       - "./jobs:/var/jenkins_home/workspace/seed-job/jenkins/jobs/"
       - "/var/run/docker.sock:/var/run/docker.sock"
+volumes: 
+  certs:
+  data:

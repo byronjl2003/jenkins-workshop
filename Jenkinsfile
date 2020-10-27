@@ -3,7 +3,14 @@
 pipeline {
   agent any
   stages {
-
+    stage('init'){
+            enviroment{
+                KEY = 'HOLA'//varialbe local del stage
+            }
+            steps{
+                sh 'echo $VAR1'
+            }
+        }
     stage('Setup') {
       steps {
         script {
